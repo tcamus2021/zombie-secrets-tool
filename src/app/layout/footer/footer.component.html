@@ -1,0 +1,11 @@
+<footer>
+    <ul class="footer-menu">
+        @for(game of games; track game.id) {
+            <li class="footer-menu--element">
+                <a href="{{ game.url }}" title="{{ game.name }}">
+                    <img src="{{ API_URL + game.logo.url }}" class="footer-menu--element-image" />
+                </a>
+            </li>
+        }
+    </ul>
+</footer>

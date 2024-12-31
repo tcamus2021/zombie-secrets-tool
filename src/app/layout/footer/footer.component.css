@@ -1,0 +1,34 @@
+@media (min-width: 769px) {
+    .footer-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-menu {
+        background-color: #F2561D;
+        list-style: none;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
+        padding: 1rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: calc(100% - 2rem);
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    .footer-menu--element-image {
+        width: 3rem;
+        height: 3rem;
+        background-color: black;
+        padding: 0.2rem;
+        border-radius: 1rem;
+    }
+}

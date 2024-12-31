@@ -1,0 +1,11 @@
+@if (hasError) {
+    <app-error />
+} @else if (isLoading) {
+    <app-loader />
+} @else {
+    <app-header [games]="games" />
+        <main>
+        <router-outlet />
+        </main>
+    <app-footer [games]="games" />
+}

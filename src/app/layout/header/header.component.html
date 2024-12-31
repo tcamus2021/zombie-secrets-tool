@@ -1,0 +1,15 @@
+<header>
+    <div class="header-section">
+        <a href="/" class="header-link">
+            <img src="round.webp" class="header-logo" />
+        </a>
+        <h1 class="header-title">Zombie Secrets Tool</h1>
+    </div>
+    <ul class="header-menu">
+        @for (game of games; track game.id) {
+            <li class="header-menu--element">
+                <a href="{{ game.url }}" class="header-menu--element-link">{{ game.name }}</a>
+            </li>
+        }
+    </ul>
+</header>
