@@ -7,6 +7,7 @@ import { LoaderComponent } from '../../common/loader/loader.component';
 import { ErrorComponent } from '../../common/error/error.component';
 import { sortGames } from '../../utils/sort';
 import { Game } from '../../types/game.type';
+import { CmsResponseService } from '../../services/cms-response.service';
 
 @Component({
   selector: 'app-global',
@@ -25,7 +26,7 @@ export class GlobalComponent implements OnInit {
   hasError: boolean = false;
   games: Array<Game> = [];
 
-  constructor(private cmsClient: ZombieSecretsCmsClient) { }
+  constructor(private cmsClient: ZombieSecretsCmsClient, private cmsResponseService: CmsResponseService) { }
 
   ngOnInit(): void {
     this.getGames();
@@ -36,6 +37,7 @@ export class GlobalComponent implements OnInit {
       next: (response): void => {
         this.games = sortGames(response.data);
         this.isLoading = false;
+        this.cmsResponseService.setData(this.games);
       },
       error: (err): void => {
         this.isLoading = false;

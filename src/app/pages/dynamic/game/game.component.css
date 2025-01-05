@@ -1,0 +1,26 @@
+.games-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40vh, 1fr));
+    gap: 8px;
+    justify-content: center;
+}
+
+.games-list * {
+    display: flex;
+    justify-content: center;
+}
+
+.games-no-map-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.games-container::after {
+    content: "";
+    display: block;
+    height: 5rem;
+    width: 100%;
+  }

@@ -1,1 +1,5 @@
-<p>dynamic works!</p>
+@if (pageType === 'GAME') {
+    <app-game [game]="actualGame" />
+} @else {
+    <app-map [map]="actualMap" />
+}

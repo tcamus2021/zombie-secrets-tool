@@ -1,9 +1,9 @@
 .header-section {
-    background-color: #F2884B;
     display: flex;
     align-items: center;
     justify-content: space-between; 
     position: relative;
+    background-color: #333333;
 }
 
 .header-logo {
@@ -12,7 +12,8 @@
     height: 5rem;
 }
 
-.header-title {
+.header-title-desktop,
+.header-title-mobile {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -28,6 +29,10 @@
         justify-content: space-around;
     }
 
+    .header-title-mobile {
+        display: none;
+    }
+
     .header-menu--element {
         width: 100%;
         display: flex;
@@ -38,8 +43,8 @@
     .header-menu--element-link {
         width: 100%;
         text-decoration: none;
-        color: black;
-        background-color: #F2561D;
+        color: white;
+        background-color: #444444;
         border: none;
         height: 3em;
         display: flex;
@@ -55,6 +60,10 @@
 
 @media (max-width: 768px) {
     .header-menu {
+        display: none;
+    }
+
+    .header-title-desktop {
         display: none;
     }
 }
