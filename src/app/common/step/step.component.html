@@ -1,21 +1,21 @@
 <div class="map-step">
-    @if(step) {
-        <div>
-            <p>{{step.name}}</p>
-            @if (!isSkipped) {
-                <p>{{step.description}}</p>
-            }
-        </div>
-        <div class="map-step-checkbox-container">
-            <input
-                class="map-step-checkbox"  
-                type="checkbox" 
-                id="{{step.id}}"
-                (change)="nextStep($event)" 
-                (keydown.enter)="nextStep($event)"
-                [checked]="isSkipped"
-                [disabled]="isSkipped"
-            />
-        </div>
-    }
+	@if(step) {
+	<div>
+		<p>{{ step.name }}</p>
+		@if (!isSkipped) {
+		<p>{{ step.description }}</p>
+		}
+	</div>
+	<div class="map-step-checkbox-container">
+		<input
+			class="map-step-checkbox"
+			type="checkbox"
+			id="{{ step.id }}"
+			(change)="nextStep($event)"
+			(keydown.enter)="nextStep($event)"
+			[checked]="isSkipped"
+			[disabled]="isSkipped"
+		/>
+	</div>
+	}
 </div>

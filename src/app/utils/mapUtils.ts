@@ -1,3 +1,4 @@
-import { MapStep } from "../types/map-step.type";
+import { MapStep } from '../types/map-step.type';
 
-export const isLastStep = (currentIndex: number, steps: Array<MapStep>) => steps.length === currentIndex;
+export const isLastStep = (currentIndex: number, steps: Array<MapStep>) =>
+	steps.length === currentIndex;

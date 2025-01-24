@@ -3,21 +3,20 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MapCardComponent } from './map-card.component';
 
 describe('MapCardComponent', () => {
-  let component: MapCardComponent;
-  let fixture: ComponentFixture<MapCardComponent>;
+	let component: MapCardComponent;
+	let fixture: ComponentFixture<MapCardComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [MapCardComponent]
-    })
-    .compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [MapCardComponent],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(MapCardComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(MapCardComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

@@ -1,19 +1,19 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background-color: #666666;
-    color: white;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	background-color: #666666;
+	color: white;
 }
 
 main {
-    min-height: 80vh;
+	min-height: 80vh;
 }
 
 .bottom-space::after {
-    content: "";
-    display: block;
-    height: 5rem;
-    width: 100%;
-  }
+	content: '';
+	display: block;
+	height: 5rem;
+	width: 100%;
+}

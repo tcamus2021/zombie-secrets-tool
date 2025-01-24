@@ -1,13 +1,13 @@
 <div class="games-container">
-    @if(game?.zombieMaps?.length !== 0) {
-        <ul class="games-list">
-            @for (map of game?.zombieMaps; track map.id) {
-                <app-map-card [map]="map" />
-            }
-        </ul>
-    } @else {
-        <div class="games-no-map-container">
-            <h2 class="games-no-map-title">Il n'y a pas de guide pour ce jeu</h2>
-        </div>
-    }
+	@if(game?.zombieMaps?.length !== 0) {
+	<ul class="games-list">
+		@for (map of game?.zombieMaps; track map.id) {
+		<app-map-card [map]="map" />
+		}
+	</ul>
+	} @else {
+	<div class="games-no-map-container">
+		<h2 class="games-no-map-title">Il n'y a pas de guide pour ce jeu</h2>
+	</div>
+	}
 </div>

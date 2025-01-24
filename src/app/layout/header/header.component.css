@@ -1,74 +1,74 @@
 .header-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    position: relative;
-    background-color: #333333;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	background-color: #333333;
 }
 
 .header-logo {
-    margin-right: auto;
-    width: 5rem;
-    height: 5rem;
+	margin-right: auto;
+	width: 5rem;
+	height: 5rem;
 }
 
 .header-title-desktop,
 .header-title-mobile {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 @media (min-width: 769px) {
-    .header-menu {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding-left: 0;
-        padding-right: 0;
-        justify-content: space-around;
-    }
+	.header-menu {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		padding-right: 0;
+		justify-content: space-around;
+	}
 
-    .header-title-mobile {
-        display: none;
-    }
+	.header-title-mobile {
+		display: none;
+	}
 
-    .header-menu--element {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
+	.header-menu--element {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
 
-    .header-menu--element-link {
-        width: 100%;
-        text-decoration: none;
-        color: white;
-        background-color: #444444;
-        border: none;
-        height: 3em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+	.header-menu--element-link {
+		width: 100%;
+		text-decoration: none;
+		color: white;
+		background-color: #444444;
+		border: none;
+		height: 3em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-    .header-menu--element-link:hover {
-        border-bottom: solid;
-        cursor: pointer;
-    }
+	.header-menu--element-link:hover {
+		border-bottom: solid;
+		cursor: pointer;
+	}
 }
 
 @media (max-width: 768px) {
-    .header-menu {
-        display: none;
-    }
+	.header-menu {
+		display: none;
+	}
 
-    .header-title-desktop {
-        display: none;
-    }
+	.header-title-desktop {
+		display: none;
+	}
 }
 
 .header-link {
-    text-decoration: none;
-    cursor: pointer;
+	text-decoration: none;
+	cursor: pointer;
 }

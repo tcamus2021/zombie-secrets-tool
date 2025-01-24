@@ -10,39 +10,42 @@ import { Game } from '../../types/game.type';
 import { CmsResponseService } from '../../services/cms-response.service';
 
 @Component({
-  selector: 'app-global',
-  imports: [
-    HeaderComponent,
-    FooterComponent,
-    RouterOutlet,
-    LoaderComponent,
-    ErrorComponent
-  ],
-  templateUrl: './global.component.html',
-  styleUrl: './global.component.css'
+	selector: 'app-global',
+	imports: [
+		HeaderComponent,
+		FooterComponent,
+		RouterOutlet,
+		LoaderComponent,
+		ErrorComponent,
+	],
+	templateUrl: './global.component.html',
+	styleUrl: './global.component.css',
 })
 export class GlobalComponent implements OnInit {
-  isLoading: boolean = false;
-  hasError: boolean = false;
-  games: Array<Game> = [];
+	isLoading: boolean = false;
+	hasError: boolean = false;
+	games: Array<Game> = [];
 
-  constructor(private cmsClient: ZombieSecretsCmsClient, private cmsResponseService: CmsResponseService) { }
+	constructor(
+		private cmsClient: ZombieSecretsCmsClient,
+		private cmsResponseService: CmsResponseService
+	) {}
 
-  ngOnInit(): void {
-    this.getGames();
-  }
+	ngOnInit(): void {
+		this.getGames();
+	}
 
-  getGames = () => {
-    this.cmsClient.getZombieGames().subscribe({
-      next: (response): void => {
-        this.games = sortGames(response.data);
-        this.isLoading = false;
-        this.cmsResponseService.setData(this.games);
-      },
-      error: (err): void => {
-        this.isLoading = false;
-        this.hasError = true;
-      }
-    })
-  }
+	getGames = () => {
+		this.cmsClient.getZombieGames().subscribe({
+			next: (response): void => {
+				this.games = sortGames(response.data);
+				this.isLoading = false;
+				this.cmsResponseService.setData(this.games);
+			},
+			error: (): void => {
+				this.isLoading = false;
+				this.hasError = true;
+			},
+		});
+	};
 }

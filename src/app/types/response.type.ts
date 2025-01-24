@@ -1,6 +1,6 @@
-import { Metadata } from "./metadata.type"
+import { Metadata } from './metadata.type';
 
 export type CmsResponse<T> = {
-    data: T,
-    meta: Metadata
-}
+	data: T;
+	meta: Metadata;
+};

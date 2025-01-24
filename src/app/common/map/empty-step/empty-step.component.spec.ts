@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AccueilComponent } from './accueil.component';
+import { EmptyStepComponent } from './empty-step.component';
 
-describe('AccueilComponent', () => {
-	let component: AccueilComponent;
-	let fixture: ComponentFixture<AccueilComponent>;
+describe('EmptyStepComponent', () => {
+	let component: EmptyStepComponent;
+	let fixture: ComponentFixture<EmptyStepComponent>;
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [AccueilComponent],
+			imports: [EmptyStepComponent],
 		}).compileComponents();
 
-		fixture = TestBed.createComponent(AccueilComponent);
+		fixture = TestBed.createComponent(EmptyStepComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});

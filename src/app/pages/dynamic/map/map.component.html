@@ -1,36 +1,35 @@
 <div class="map-container">
-    @if(mapDetail) {
-        <div class="map-header">
-            <div>
-                <h2 class="map-header-title">{{mapDetail.name}}</h2>
-                <button class="map-header-restart" (click)="restart()">Retenter le secrets</button>
-            </div>
-            <div class="map-header-round">
-                <h3>Manche maximale</h3>
-                <app-round-display [round]="actualStep?.maxRound || 0" />
-            </div>
-        </div>
-        @if (mapDetail.steps.length !== 0) {
-            <div class="map-content bottom-space">
-                @if (!finished && actualStep) {
-                    @for(skippedStep of skippedSteps; track skippedStep.id) {
-                        <app-step [step]="skippedStep" [isSkipped]="true" />
-                    }
-                    <app-step [step]="actualStep" [isSkipped]="false" [nextStep]="nextStep" />
-                } @else {
-                    <div class="map-content-finished">
-                        <p>Vous avez terminé le secret de la carte {{mapDetail.name}}</p>
-                        <p>Félicitation !</p>
-                    </div>
-                }
-            </div>
-        } @else {
-            <div class="map-content-finished">
-                <p>Le secret de la carte {{mapDetail.name}} n'est pas encore publié</p>
-            </div>
-        }
-    }
-    @else {
-        <app-loader/>
-    }
+	@if(mapDetail) {
+	<div class="map-header">
+		<div>
+			<h2 class="map-header-title">{{ mapDetail.name }}</h2>
+			<button class="map-header-restart" (click)="restart()">
+				Retenter le secrets
+			</button>
+		</div>
+		<div class="map-header-round">
+			<h3>Manche maximale</h3>
+			<app-round-display [round]="actualStep?.maxRound || 0" />
+		</div>
+	</div>
+	@if (mapDetail.steps.length !== 0) {
+	<div class="map-content bottom-space">
+		@if (!finished && actualStep) { @for(skippedStep of skippedSteps; track
+		skippedStep.id) {
+		<app-step [step]="skippedStep" [isSkipped]="true" />
+		}
+		<app-step
+			[step]="actualStep"
+			[isSkipped]="false"
+			[nextStep]="nextStep"
+		/>
+		} @else {
+		<app-ending [mapName]="mapDetail.name" />
+		}
+	</div>
+	} @else {
+	<app-empty-step [mapName]="mapDetail.name" />
+	} } @else {
+	<app-loader />
+	}
 </div>
